@@ -1,6 +1,0 @@
-UpdateContext({m_ilk_kayit:First(Sharepoint_List).Kimlik});;
-UpdateContext({m_sonkayit:First(Sort(Sharepoint_List;Kimlik;Descending)).Kimlik});; 
-UpdateContext({m_dongu_sayisi:RoundUp((m_sonkayit-m_ilk_kayit)/500;0)});;
-ClearCollect(m_dongu_listesi;Sequence(m_dongu_sayisi));;
-Clear(m_min_max);; ForAll(m_dongu_listesi;Collect(m_min_max;{min:(ThisRecord.Value*500)-500;max:ThisRecord.Value*500}));;
-Clear(Full_List);; ForAll(m_min_max;Collect(Full_List;Filter(Sharepoint_List;Kimlik>=min;Kimlik<max)));;
