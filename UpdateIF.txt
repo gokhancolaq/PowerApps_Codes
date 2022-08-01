@@ -1,0 +1,9 @@
+UpdateIf(Sharepoint_List;Kimlik=First(Filter(Sharepoint_List;Title="A";Kimlik=KimlikBulText.Text)).Kimlik;{
+Title:"Deneme";
+TalepEdenAd:TalepEdenAdText.Text;
+TalepEdenMail:TalepEdenMailText.Text;
+Departman:DepartmanText.Text;
+Yonetici:YoneticiAdText.Text;
+TalepTarih:Today();
+Durum:"Yönetici Onayına Gönderildi"
+});;
