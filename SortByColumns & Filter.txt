@@ -1,0 +1,4 @@
+SortByColumns(Filter(Sharepoint_List;Onay="Onaylandı";IsBlank(Durum)
+;Or(
+   "admin@microsoft.com"=User().Email)
+);"Created";Descending)
